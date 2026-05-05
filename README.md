@@ -24,6 +24,7 @@ Este projeto segue uma arquitetura em camadas, separando responsabilidades para 
 
 # 📁 Estrutura do Projeto
 
+```bash
 /wp-content/plugins/wp-rest-api/
 │
 ├── wp-rest-api.php
@@ -48,6 +49,7 @@ Este projeto segue uma arquitetura em camadas, separando responsabilidades para 
 │
 ├── helpers/
 │   └── Response.php
+```
 
 ---
 
