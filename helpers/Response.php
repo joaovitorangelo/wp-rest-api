@@ -1,5 +1,9 @@
 <?php
 
+namespace TokDigital\Helpers;
+
+use WP_REST_Response;
+
 class Response {
 
     public static function success($data = [], $status = 200) {

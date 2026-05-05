@@ -1,5 +1,10 @@
 <?php
 
+namespace TokDigital\Repositories;
+
+use WP_Query;
+use Exception;
+
 class ProductRepository {
 
     public function all() {

@@ -1,5 +1,11 @@
 <?php
 
+namespace TokDigital\Controllers;
+
+use TokDigital\Services\ProductService;
+use TokDigital\Helpers\Response;
+use Exception;
+
 class ProductController {
 
     public static function index($request) {

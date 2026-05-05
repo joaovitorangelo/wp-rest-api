@@ -1,5 +1,9 @@
 <?php
 
+namespace TokDigital\Validators;
+
+use Exception;
+
 class ProductValidator {
 
     public static function validate($data) {

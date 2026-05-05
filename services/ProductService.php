@@ -1,5 +1,10 @@
 <?php
 
+namespace TokDigital\Services;
+
+use TokDigital\Repositories\ProductRepository;
+use TokDigital\Validators\ProductValidator;
+
 class ProductService {
 
     private $repo;
@@ -13,9 +18,7 @@ class ProductService {
     }
 
     public function create($data) {
-
         ProductValidator::validate($data);
-
         return $this->repo->create($data);
     }
 }
