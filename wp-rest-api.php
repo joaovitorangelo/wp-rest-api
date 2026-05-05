@@ -5,6 +5,8 @@
 
 defined('ABSPATH') || exit;
 
+require_once __DIR__ . '/config/app.php';
+
 spl_autoload_register(function ($class) {
 
     $prefix = 'TokDigital\\';
@@ -27,4 +29,4 @@ spl_autoload_register(function ($class) {
 });
 
 // rotas continuam manual
-require_once __DIR__ . '/routes/products-route.php';
+require_once __DIR__ . '/routes/posts-route.php';

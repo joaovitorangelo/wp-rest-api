@@ -4,7 +4,7 @@ namespace TokDigital\Validators;
 
 use Exception;
 
-class ProductValidator {
+class PostValidator {
 
     public static function validate($data) {
 

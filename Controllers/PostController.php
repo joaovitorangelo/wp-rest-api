@@ -2,15 +2,15 @@
 
 namespace TokDigital\Controllers;
 
-use TokDigital\Services\ProductService;
+use TokDigital\Services\PostService;
 use TokDigital\Helpers\Response;
 use Exception;
 
-class ProductController {
+class PostController {
 
     public static function index($request) {
         try {
-            $service = new ProductService();
+            $service = new PostService();
             $data = $service->getAll();
 
             return Response::success($data);
@@ -24,7 +24,7 @@ class ProductController {
         try {
             $params = $request->get_json_params();
 
-            $service = new ProductService();
+            $service = new PostService();
             $data = $service->create($params);
 
             return Response::success($data, 201);

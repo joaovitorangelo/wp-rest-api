@@ -2,15 +2,15 @@
 
 namespace TokDigital\Services;
 
-use TokDigital\Repositories\ProductRepository;
-use TokDigital\Validators\ProductValidator;
+use TokDigital\Repositories\PostRepository;
+use TokDigital\Validators\PostValidator;
 
-class ProductService {
+class PostService {
 
     private $repo;
 
     public function __construct() {
-        $this->repo = new ProductRepository();
+        $this->repo = new PostRepository();
     }
 
     public function getAll() {
@@ -18,7 +18,7 @@ class ProductService {
     }
 
     public function create($data) {
-        ProductValidator::validate($data);
+        PostValidator::validate($data);
         return $this->repo->create($data);
     }
 }

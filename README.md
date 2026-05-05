@@ -33,19 +33,19 @@ Este projeto segue uma arquitetura em camadas, separando responsabilidades para 
 │   └── app.php
 │
 ├── routes/
-│   └── products-route.php
+│   └── posts-route.php
 │
 ├── controllers/
-│   └── ProductController.php
+│   └── PostController.php
 │
 ├── services/
-│   └── ProductService.php
+│   └── PostService.php
 │
 ├── repositories/
-│   └── ProductRepository.php
+│   └── PostRepository.php
 │
 ├── validators/
-│   └── ProductValidator.php
+│   └── PostValidator.php
 │
 ├── helpers/
 │   └── Response.php
@@ -69,7 +69,7 @@ Esse método utiliza **HTTP Basic Authentication**, enviando credenciais no head
 
 ```bash
 curl -u admin:app_password
-https://site.com/wp-json/my-api/v1/products
+https://site.com/wp-json/my-api/v1/posts
 ```
 
 ## 2. Usando wp_remote_get
@@ -77,7 +77,7 @@ https://site.com/wp-json/my-api/v1/products
 ```PHP
 <?php
 
-$response = wp_remote_get("https://site.com/wp-json/my-api/v1/products", [
+$response = wp_remote_get("https://site.com/wp-json/my-api/v1/posts", [
     'headers' => [
         'Authorization' => 'Basic ' . base64_encode('admin:app_password')
     ]
@@ -95,13 +95,13 @@ print_r($data);
 ```PHP
 <?php
 
-$response = wp_remote_post("https://site.com/wp-json/my-api/v1/products", [
+$response = wp_remote_post("https://site.com/wp-json/my-api/v1/posts", [
     'headers' => [
         'Authorization' => 'Basic ' . base64_encode('admin:app_password'),
         'Content-Type'  => 'application/json'
     ],
     'body' => json_encode([
-        'title' => 'Produto via WP'
+        'title' => 'Post via WP'
     ])
 ]);
 
