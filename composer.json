@@ -1,0 +1,9 @@
+{
+  "name": "tokdigital/wp-rest-api",
+  "autoload": {
+    "psr-4": {
+      "TokDigital\\WpRestApi\\": "src/"
+    }
+  },
+  "require": {}
+}

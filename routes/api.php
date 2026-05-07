@@ -1,6 +1,8 @@
 <?php
 
-use TokDigital\Controllers\PostController;
+defined('ABSPATH') || exit;
+
+use TokDigital\WpRestApi\Controllers\PostController;
 
 add_action('rest_api_init', function () {
 
