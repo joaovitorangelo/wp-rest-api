@@ -5,5 +5,7 @@
       "TokDigital\\WpRestApi\\": "src/"
     }
   },
-  "require": {}
+  "require": {
+    "zircote/swagger-php": "^6.1"
+  }
 }
